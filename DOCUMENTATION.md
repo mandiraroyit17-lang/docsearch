@@ -167,8 +167,6 @@ The gap, stated plainly: the tenant id is currently client-supplied, not derived
 
 ## 3. Experience Showcase
 
-> The two entries below marked **[FILL IN]** need your actual specifics — I only have what's in your resume, and inventing incident details would be dishonest in a job application. Everything else is drafted directly from your stated experience.
-
 **A similar distributed system you've built, and its scale/impact**
 
 At JPMorgan Chase, I led end-to-end development of Autom8, a distributed system (React.js frontend, Spring Boot microservices backend) that consolidated three legacy applications into one platform. The project reduced maintenance costs by 30% and improved response time by 40%, and was recognized with a Certificate of Recognition as one of the team's highest-visibility engineering achievements.
