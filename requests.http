@@ -1,0 +1,36 @@
+### Index a document
+POST http://localhost:8080/documents
+Content-Type: application/json
+
+{
+  "tenantId": "acme",
+  "title": "Q3 Roadmap",
+  "content": "Search infrastructure migration plan for Q3, moving off the legacy grep-based tool."
+}
+
+### Index a second document (different tenant, to sanity-check isolation)
+POST http://localhost:8080/documents
+Content-Type: application/json
+
+{
+  "tenantId": "globex",
+  "title": "Onboarding Guide",
+  "content": "New hire onboarding steps and search platform overview."
+}
+
+### Search within a tenant
+GET http://localhost:8080/search?q=migration&tenant=acme
+
+### Search the other tenant for the same term — should return nothing
+GET http://localhost:8080/search?q=migration&tenant=globex
+
+### Get a document by id (replace {id} with a real id from the index response)
+GET http://localhost:8080/documents/{id}
+X-Tenant-ID: acme
+
+### Delete a document (replace {id})
+DELETE http://localhost:8080/documents/{id}
+X-Tenant-ID: acme
+
+### Health check
+GET http://localhost:8080/health
