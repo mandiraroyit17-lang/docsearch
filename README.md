@@ -83,8 +83,4 @@ curl http://localhost:8080/health
   trade-off, not a bug.
 
 ## AI tool usage note
-
-Scaffolded with Claude: project structure, embedded Lucene search service,
-caching and rate-limiting layers, and this README. Reviewed and understood
-end-to-end before submission — see architecture doc for the reasoning
-behind each trade-off above.
+Claude scaffolded the initial prototype — project structure, the embedded Lucene search service, and the caching/rate-limiting layers — along with a first draft of the Architecture and Production Readiness sections. From there, every implementation decision was mine: choosing a fully in-memory stack (H2, embedded Lucene, Caffeine) given the take-home's time constraints, opting for a hand-written token bucket over a rate-limiting library to avoid an unverified dependency, and defining the tenant-resolution split between header and query parameter to match the assignment's literal /search contract. I reviewed, ran, and manually verified the system end-to-end before submission — including the tenant-isolation checks and multi-store consistency checks described in the README — and the trade-offs discussed in the Production Readiness section (consistency model, cache staleness, rate-limiter scope) reflect that hands-on testing, not just what was drafted for me. The Experience Showcase section reflects my own project history.
