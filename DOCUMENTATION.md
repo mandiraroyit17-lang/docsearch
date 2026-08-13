@@ -175,19 +175,11 @@ At JPMorgan Chase, I led end-to-end development of Autom8, a distributed system 
 
 As part of the Autom8 rebuild, I refactored the frontend UI components using React.js, Context API, and modern hooks, which reduced component re-render overhead and improved rendering performance.
 
-*[FILL IN: if you have a specific measured number for this — e.g., a reduction in re-render count, load time, or a profiler comparison before/after — add it here. A concrete figure is what separates this from a generic-sounding claim in an interview follow-up.]*
-
-**A critical production incident you resolved in a distributed system**
-
-*[FILL IN — this needs a real incident from your SocGen or JPMC production-support work, not a generic one. Use this structure: what broke (symptom, which service) → how you found it (alert, Splunk, user report) → immediate mitigation → root cause → the actual fix → what changed afterward to prevent recurrence. Your resume states you "lead cross-team production support coordination, ensuring rapid incident triage" at SocGen — that's the responsibility; this section needs one specific instance of it.]*
 
 **An architectural decision that balanced competing concerns**
 
 The decision to consolidate three legacy applications into Autom8 rather than incrementally patch them individually balanced short-term migration risk and effort against long-term maintainability — the 30% maintenance-cost reduction is the measured outcome of that trade-off.
 
-*[FILL IN: if you remember the specific competing concerns you weighed at the time — e.g., a phased rollout vs. big-bang migration decision, a build-vs-buy call, or a consistency-vs-availability trade-off in Autom8's design — a sentence or two of that reasoning makes this answer much stronger than the outcome alone.]*
-
----
 
 ## 4. AI Tool Usage Note
 
